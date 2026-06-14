@@ -1,6 +1,10 @@
 # 2Q NHẪN THUẬT — Brand Information
 
+![2Q Nhẫn Thuật Logo](/images/logo.jpg)
+
 ## Brand Overview
+
+![2Q Nhẫn Thuật Banner](/images/banner.jpg)
 
 **2Q Nhẫn Thuật** is a handcrafted jewelry and accessories brand based in Da Nang, Vietnam, specializing in transforming vintage spoons into unique wearable art.
 
@@ -33,6 +37,9 @@ Each item is personally crafted by Quyen, ensuring authenticity, quality, and in
 ---
 
 # What We Create
+
+![Products](/images/images.jpg)
+![Products](/images/images2.jpg)
 
 ### Handmade Spoon Rings
 
@@ -93,6 +100,8 @@ The material is selected to ensure both aesthetic appeal and long-term durabilit
 
 # Craftsmanship
 
+![Setting Up](/images/settingup.jpg)
+
 All products are:
 
 * Handmade
@@ -135,6 +144,16 @@ The imperfections of handmade craftsmanship are embraced as part of the product'
 
 ## Main Workshop / Experience Space
 
+![Workshop Banner](/images/workshop_banner.jpg)
+
+<video src="/video/viewoftheshop.mp4" controls width="100%"></video>
+
+![Workshop View 1](/images/workshop.jpg)
+![Workshop View 2](/images/workshop2.jpg)
+![Workshop View 3](/images/workshop3.jpg)
+![Workshop View 4](/images/workshop4.jpg)
+![Workshop View 5](/images/workshop5.jpg)
+
 Musky Bar
 
 27 Nguyễn Cao Luyện,
@@ -149,6 +168,41 @@ Customers can visit to:
 * Discuss custom orders
 * Meet the maker
 * Experience the crafting process
+
+![Customer Choosing Spoon](/images/customer_choosing_spoon.jpg)
+![Moments of Customer](/images/moments_of_customer.jpg)
+
+### Customer Gallery
+![Customer 1](/images/customer/1.jpg)
+![Customer 2](/images/customer/2.jpg)
+![Customer 3](/images/customer/3.jpg)
+![Customer 4](/images/customer/4.jpg)
+![Customer 5](/images/customer/5.jpg)
+
+### Customer Feedback
+![Feedback 1](/images/feedback/1.jpg)
+![Feedback 2](/images/feedback/2.jpg)
+![Feedback 3](/images/feedback/3.jpg)
+![Feedback 4](/images/feedback/4.jpg)
+![Feedback 5](/images/feedback/5.jpg)
+![Feedback 6](/images/feedback/6.jpg)
+![Feedback 7](/images/feedback/7.jpg)
+![Feedback 8](/images/feedback/8.jpg)
+![Feedback 9](/images/feedback/9.jpg)
+![Feedback 10](/images/feedback/10.jpg)
+![Feedback 11](/images/feedback/11.jpg)
+![Feedback 12](/images/feedback/12.jpg)
+![Feedback 13](/images/feedback/13.jpg)
+![Feedback 14](/images/feedback/14.jpg)
+![Feedback 15](/images/feedback/15.jpg)
+![Feedback 16](/images/feedback/16.jpg)
+![Feedback 17](/images/feedback/17.jpg)
+![Feedback 18](/images/feedback/18.jpg)
+![Feedback 19](/images/feedback/19.jpg)
+![Feedback 20](/images/feedback/20.jpg)
+![Feedback 21](/images/feedback/21.jpg)
+![Feedback 22](/images/feedback/22.jpg)
+![Feedback 23](/images/feedback/23.jpg)
 
 ---
 
@@ -237,19 +291,19 @@ The brand speaks to people who value individuality over mass production.
 
 ### Phone
 
-0896 208 698
+[0896 208 698](tel:0896208698)
 
 ### Facebook
 
-https://www.facebook.com/profile.php?id=61577127505025
+[2Q Nhẫn Thuật on Facebook](https://www.facebook.com/profile.php?id=61577127505025)
 
 ### Instagram
 
-https://www.instagram.com/2qnhanthuat
+[@2qnhanthuat](https://www.instagram.com/2qnhanthuat)
 
 ### Google Maps
 
-https://maps.app.goo.gl/BfdUSBMitjXtA9rK9
+[Musky Bar Location](https://maps.app.goo.gl/BfdUSBMitjXtA9rK9)
 
 ---
 

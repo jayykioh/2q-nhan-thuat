@@ -75,7 +75,8 @@ body {
   100% { transform: translateX(-50%); }
 }
 
+/* .reveal-item initial state is handled entirely by GSAP gsap.from() 
+   — do NOT set opacity:0 here or GSAP animates 0→0 (stays invisible) */
 .reveal-item {
-  opacity: 0;
-  transform: translateY(50px);
+  will-change: opacity, transform;
 }

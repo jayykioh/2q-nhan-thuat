@@ -12,20 +12,22 @@ export default function WorksGrid() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Reveal items on scroll
-      gsap.from(".reveal-item", {
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-        y: 50,
-        opacity: 0,
-        duration: 1.0,
-        stagger: 0.12,
-        ease: "power3.out",
-        clearProps: "all", // remove inline styles after animation so hover works properly
-      });
+      // Reveal items on scroll — use fromTo so opacity:1 is explicit (not relying on CSS natural state)
+      gsap.fromTo(".reveal-item",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.0,
+          stagger: 0.12,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
 
       // Magnetic hover & Image reveal
       const cards = gsap.utils.toArray(".project-card") as HTMLElement[];

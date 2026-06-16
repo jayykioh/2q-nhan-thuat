@@ -1,62 +1,182 @@
-"use client";
-
 import Link from "next/link";
 
+const Facebook = ({ size = 16, className = "" }: { size?: number; className?: string }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+const Instagram = ({ size = 16, className = "" }: { size?: number; className?: string }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+);
+
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="px-[var(--gutter)] py-12 bg-[var(--bg)] border-t border-[var(--border)]">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="flex flex-col gap-2">
-          <Link href="/" className="font-display text-2xl font-light text-[var(--text-primary)] tracking-widest uppercase mb-4">
-            2Q Nhẫn Thuật
+    <footer className="bg-[var(--bg)] border-t border-[rgba(255,255,255,0.08)]">
+      {/* CTA Section */}
+      <div className="px-[var(--gutter)] py-[clamp(60px,10vw,100px)] border-b border-[rgba(255,255,255,0.08)]">
+        <div className="footer-cta-reveal">
+          <Link
+            href="#contact"
+            className="block font-display text-[clamp(28px,5vw,56px)] font-light leading-[1.08] text-[var(--text-primary)] hover:opacity-75 transition-opacity duration-250 max-w-[680px]"
+          >
+            Let&apos;s make something{" "}
+            <em className="text-[var(--accent)] italic font-light">
+              worth remembering.
+            </em>
           </Link>
-          <p className="font-body text-sm text-[var(--text-muted)] max-w-xs leading-relaxed">
-            Transforming vintage spoons into unique wearable art. Da Nang, Vietnam.
-          </p>
         </div>
-        
-        <div className="grid grid-cols-2 gap-8">
-          <div className="flex flex-col gap-4">
-            <p className="font-body text-[var(--label-size)] tracking-[0.15em] uppercase text-[var(--text-primary)]">
-              Contact
-            </p>
-            <ul className="flex flex-col gap-2 font-body text-sm text-[var(--text-muted)]">
-              <li>
-                <a href="tel:0896208698" className="hover:text-[var(--text-primary)] transition-colors">
-                  0896 208 698
-                </a>
-              </li>
-              <li>
-                <a href="https://maps.app.goo.gl/BfdUSBMitjXtA9rK9" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-primary)] transition-colors">
-                  Musky Bar (Workshop)
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="flex flex-col gap-4">
-            <p className="font-body text-[var(--label-size)] tracking-[0.15em] uppercase text-[var(--text-primary)]">
-              Social
-            </p>
-            <ul className="flex flex-col gap-2 font-body text-sm text-[var(--text-muted)]">
-              <li>
-                <a href="https://www.facebook.com/profile.php?id=61577127505025" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-primary)] transition-colors">
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/2qnhanthuat" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-primary)] transition-colors">
-                  Instagram
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+
+        <p className="font-body text-[9px] font-normal tracking-[0.2em] uppercase text-[rgba(255,255,255,0.22)] mt-7">
+          DA NANG — WORLDWIDE SHIPPING
+        </p>
       </div>
-      
-      <div className="mt-16 pt-8 border-t border-[var(--border)] flex flex-col md:flex-row justify-between items-center gap-4 font-body text-xs text-[var(--text-muted)] tracking-wider">
-        <p>&copy; {new Date().getFullYear()} 2Q Nhẫn Thuật. All rights reserved.</p>
-        <p>Crafted by hand.</p>
+
+      {/* Minimalist Bottom Bar */}
+      <div className="px-[var(--gutter)] py-8 md:py-12">
+        {/* Desktop Layout */}
+        <div className="hidden md:grid grid-cols-5 gap-8 items-end">
+          {/* Col 1: Brand */}
+          <div>
+            <p className="font-display text-[14px] font-normal text-[var(--text-primary)]">
+              2Q Nhẫn Thuật
+            </p>
+            <p className="font-body text-[9px] tracking-[0.06em] text-[rgba(255,255,255,0.20)] mt-2">
+              © {currentYear}
+            </p>
+          </div>
+
+          {/* Col 2-3: Quick Links (Center) */}
+          <div className="col-span-2 flex justify-center gap-12">
+            <Link
+              href="#about"
+              className="font-body text-[11px] font-normal tracking-[0.12em] uppercase text-[rgba(255,255,255,0.40)] hover:text-[var(--accent)] transition-colors duration-200"
+            >
+              About
+            </Link>
+            <Link
+              href="#works"
+              className="font-body text-[11px] font-normal tracking-[0.12em] uppercase text-[rgba(255,255,255,0.40)] hover:text-[var(--accent)] transition-colors duration-200"
+            >
+              Works
+            </Link>
+          </div>
+
+          {/* Col 4: Contact Link */}
+          <div>
+            <a
+              href="tel:0896208698"
+              className="font-body text-[11px] font-normal tracking-[0.12em] uppercase text-[rgba(255,255,255,0.40)] hover:text-[var(--accent)] transition-colors duration-200"
+            >
+              0896 208 698
+            </a>
+          </div>
+
+          {/* Col 5: Social Icons */}
+          <div className="flex justify-end gap-6">
+            <a
+              href="https://www.facebook.com/profile.php?id=61577127505025"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center text-[rgba(255,255,255,0.35)] hover:text-[var(--accent)] transition-colors duration-200"
+              aria-label="Facebook"
+            >
+              <Facebook size={18} />
+            </a>
+            <a
+              href="https://www.instagram.com/2qnhanthuat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center text-[rgba(255,255,255,0.35)] hover:text-[var(--accent)] transition-colors duration-200"
+              aria-label="Instagram"
+            >
+              <Instagram size={18} />
+            </a>
+          </div>
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="flex flex-col gap-8 md:hidden">
+          {/* Brand + Copyright */}
+          <div className="text-center">
+            <p className="font-display text-[14px] font-normal text-[var(--text-primary)]">
+              2Q Nhẫn Thuật
+            </p>
+            <p className="font-body text-[9px] tracking-[0.06em] text-[rgba(255,255,255,0.20)] mt-1">
+              © {currentYear}
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="flex justify-center gap-8">
+            <Link
+              href="#about"
+              className="font-body text-[11px] font-normal tracking-[0.12em] uppercase text-[rgba(255,255,255,0.40)] hover:text-[var(--accent)] transition-colors duration-200"
+            >
+              About
+            </Link>
+            <Link
+              href="#works"
+              className="font-body text-[11px] font-normal tracking-[0.12em] uppercase text-[rgba(255,255,255,0.40)] hover:text-[var(--accent)] transition-colors duration-200"
+            >
+              Works
+            </Link>
+            <a
+              href="tel:0896208698"
+              className="font-body text-[11px] font-normal tracking-[0.12em] uppercase text-[rgba(255,255,255,0.40)] hover:text-[var(--accent)] transition-colors duration-200"
+            >
+              Contact
+            </a>
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex justify-center gap-6 pt-4 border-t border-[rgba(255,255,255,0.08)]">
+            <a
+              href="https://www.facebook.com/profile.php?id=61577127505025"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center text-[rgba(255,255,255,0.35)] hover:text-[var(--accent)] transition-colors duration-200"
+              aria-label="Facebook"
+            >
+              <Facebook size={18} />
+            </a>
+            <a
+              href="https://www.instagram.com/2qnhanthuat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center text-[rgba(255,255,255,0.35)] hover:text-[var(--accent)] transition-colors duration-200"
+              aria-label="Instagram"
+            >
+              <Instagram size={18} />
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );

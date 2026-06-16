@@ -6,8 +6,31 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const services = [
+  {
+    num: "01",
+    name: "Handmade Spoon Rings",
+    desc: "Signature rings crafted from vintage spoons. Each spoon carries its own shape, pattern, and history, making every ring unique.",
+  },
+  {
+    num: "02",
+    name: "Spoon Bracelets",
+    desc: "Hand-shaped bracelets created from stainless steel spoons. Comfortable, durable, and suitable for daily wear.",
+  },
+  {
+    num: "03",
+    name: "Custom Jewelry",
+    desc: "Personalized rings and bracelets made according to customer preferences. Custom sizing, pattern selection, and custom engraving.",
+  },
+  {
+    num: "04",
+    name: "Stainless Steel",
+    desc: "Rust resistant, durable, long-lasting, water-resistant, and comfortable on the skin for everyday wear.",
+  },
+];
+
 export default function Services() {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -30,29 +53,6 @@ export default function Services() {
 
     return () => ctx.revert();
   }, []);
-
-  const services = [
-    {
-      num: "01",
-      name: "Handmade Spoon Rings",
-      desc: "Signature rings crafted from vintage spoons. Each spoon carries its own shape, pattern, and history, making every ring unique.",
-    },
-    {
-      num: "02",
-      name: "Spoon Bracelets",
-      desc: "Hand-shaped bracelets created from stainless steel spoons. Comfortable, durable, and suitable for daily wear.",
-    },
-    {
-      num: "03",
-      name: "Custom Jewelry",
-      desc: "Personalized rings and bracelets made according to customer preferences. Custom sizing, pattern selection, and custom engraving.",
-    },
-    {
-      num: "04",
-      name: "Stainless Steel",
-      desc: "Rust resistant, durable, long-lasting, water-resistant, and comfortable on the skin for everyday wear.",
-    },
-  ];
 
   return (
     <section ref={containerRef} className="services reveal-section px-[var(--gutter)] py-[var(--section-py)]" id="services">

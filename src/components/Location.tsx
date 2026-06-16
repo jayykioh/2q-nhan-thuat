@@ -7,8 +7,16 @@ import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const gallery = [
+  "/images/workshop.jpg",
+  "/images/workshop2.jpg",
+  "/images/workshop3.jpg",
+  "/images/workshop4.jpg",
+  "/images/workshop5.jpg",
+];
+
 export default function Location() {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -31,14 +39,6 @@ export default function Location() {
 
     return () => ctx.revert();
   }, []);
-
-  const gallery = [
-    "/images/workshop.jpg",
-    "/images/workshop2.jpg",
-    "/images/workshop3.jpg",
-    "/images/workshop4.jpg",
-    "/images/workshop5.jpg",
-  ];
 
   return (
     <section ref={containerRef} className="reveal-section px-[var(--gutter)] py-[var(--section-py)] bg-[var(--bg-elevated)]" id="location">

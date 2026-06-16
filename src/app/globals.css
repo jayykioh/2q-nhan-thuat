@@ -15,11 +15,11 @@
   --font-body:    'Inter', 'DM Sans', system-ui, sans-serif;
 
   /* Scale */
-  --hero-size:    clamp(4rem, 11vw, 9rem);
-  --h2-size:      clamp(2rem, 4.5vw, 3.5rem);
-  --h3-size:      clamp(1.2rem, 2vw, 1.6rem);
-  --body-size:    clamp(0.9rem, 1.1vw, 1.05rem);
-  --label-size:   0.72rem;
+  --hero-size:    clamp(3rem, 15vw, 9rem);
+  --h2-size:      clamp(2.1rem, 8vw, 3.5rem);
+  --h3-size:      clamp(1.25rem, 4vw, 1.6rem);
+  --body-size:    clamp(1rem, 1.1vw, 1.05rem);
+  --label-size:   clamp(0.72rem, 2.4vw, 0.78rem);
 
   /* Motion */
   --ease-cinematic: cubic-bezier(0.76, 0, 0.24, 1);
@@ -30,8 +30,8 @@
 
   /* Layout */
   --max-w:     1280px;
-  --gutter:    clamp(1.5rem, 5vw, 5rem);
-  --section-py: clamp(4rem, 10vw, 10rem);
+  --gutter:    clamp(1rem, 5vw, 5rem);
+  --section-py: clamp(3.5rem, 10vw, 10rem);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -46,8 +46,26 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body);
   overflow-x: hidden;
+  min-width: 320px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+a,
+button {
+  touch-action: manipulation;
+}
+
+a:focus-visible,
+button:focus-visible,
+iframe:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 ::selection {
@@ -79,4 +97,62 @@ body {
    — do NOT set opacity:0 here or GSAP animates 0→0 (stays invisible) */
 .reveal-item {
   will-change: opacity, transform;
+}
+
+.footer-cta-reveal {
+  animation: footerCtaReveal 1s var(--ease-cinematic) both;
+}
+
+@keyframes footerCtaReveal {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar mobile menu animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeIn 0.25s ease-out, slideInFromTop 0.25s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.25s ease-out;
+}
+
+.slide-in-from-top-2 {
+  animation: slideInFromTop 0.25s ease-out;
+}
+
+.duration-250 {
+  animation-duration: 0.25s;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-py: clamp(3rem, 12vw, 5rem);
+  }
+
+  .marquee-track:hover {
+    animation-play-state: running;
+  }
 }

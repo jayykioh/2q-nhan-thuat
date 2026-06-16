@@ -1,19 +1,20 @@
-"use client";
-
 import Image from "next/image";
 
-export default function FeedbackGallery() {
-  const images = Array.from({ length: 23 }, (_, i) => `/images/feedback/${i + 1}.jpg`);
+const feedbackImages = Array.from(
+  { length: 23 },
+  (_, i) => `/images/feedback/${i + 1}.jpg`
+);
 
+export default function FeedbackGallery() {
   const renderImages = () => (
     <>
-      {images.map((src, i) => (
-        <div key={i} className="relative h-[400px] w-[300px] flex-shrink-0 mx-2 overflow-hidden rounded-[2px]">
+      {feedbackImages.map((src, i) => (
+        <div key={i} className="relative h-[min(70vh,400px)] w-[min(78vw,300px)] flex-shrink-0 mx-2 overflow-hidden rounded-[2px]">
           <Image
             src={src}
             alt={`Customer Feedback ${i + 1}`}
             fill
-            sizes="300px"
+            sizes="(max-width: 480px) 78vw, 300px"
             className="object-cover"
           />
         </div>
@@ -22,7 +23,7 @@ export default function FeedbackGallery() {
   );
 
   return (
-    <section className="py-24 bg-[var(--bg)] overflow-hidden">
+    <section className="py-[var(--section-py)] bg-[var(--bg)] overflow-hidden">
       <div className="px-[var(--gutter)] mb-12 text-center">
         <p className="font-body text-[var(--label-size)] tracking-[0.15em] uppercase text-[var(--text-muted)] mb-4">
           Customer Feedback

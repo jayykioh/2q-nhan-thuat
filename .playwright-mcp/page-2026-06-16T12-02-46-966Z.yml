@@ -1,0 +1,346 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - navigation [ref=e3]:
+      - link "2Q Nhẫn Thuật logo" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "2Q Nhẫn Thuật logo" [ref=e5]
+      - button "Open menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e10]:
+      - img "Handcrafted spoon jewelry laid out by 2Q Nhẫn Thuật" [ref=e12]
+      - generic:
+        - paragraph: Da Nang, Vietnam
+        - paragraph: Est. 2026
+      - generic [ref=e14]:
+        - separator [ref=e15]
+        - generic [ref=e16]:
+          - generic [ref=e17]:
+            - paragraph [ref=e18]: Wearable Stories
+            - heading "OKGH ZRTT6YFZ7 Q6S9VN FREK ZIJNHTWC SOUWMN6" [level=1] [ref=e19]:
+              - generic [ref=e20]:
+                - generic [ref=e23]:
+                  - generic [ref=e24]: OKGH ZRTT6YFZ7
+                  - generic [ref=e25]: OKGH ZRTT6YFZ7
+                - generic [ref=e28]:
+                  - generic [ref=e29]: Q6S9VN FREK
+                  - generic [ref=e30]: Q6S9VN FREK
+                - generic [ref=e33]:
+                  - generic [ref=e34]: ZIJNHTWC SOUWMN6
+                  - generic [ref=e35]: ZIJNHTWC SOUWMN6
+          - generic [ref=e36]:
+            - paragraph [ref=e37]: Every piece is individually handcrafted, making each creation truly one-of-one.
+            - link "Order Custom" [ref=e38] [cursor=pointer]:
+              - /url: https://www.facebook.com/profile.php?id=61577127505025
+              - text: Order Custom
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]: ONE-OF-ONE
+        - img [ref=e45]
+      - generic [ref=e48]:
+        - generic [ref=e49]: HANDCRAFTED
+        - img [ref=e51]
+      - generic [ref=e54]:
+        - generic [ref=e55]: STAINLESS STEEL
+        - img [ref=e57]
+      - generic [ref=e60]:
+        - generic [ref=e61]: SUSTAINABLE
+        - img [ref=e63]
+      - generic [ref=e66]:
+        - generic [ref=e67]: WEARABLE STORIES
+        - img [ref=e69]
+      - generic [ref=e72]:
+        - generic [ref=e73]: DA NANG MADE
+        - img [ref=e75]
+      - generic [ref=e78]:
+        - generic [ref=e79]: ONE-OF-ONE
+        - img [ref=e81]
+      - generic [ref=e84]:
+        - generic [ref=e85]: HANDCRAFTED
+        - img [ref=e87]
+      - generic [ref=e90]:
+        - generic [ref=e91]: STAINLESS STEEL
+        - img [ref=e93]
+      - generic [ref=e96]:
+        - generic [ref=e97]: SUSTAINABLE
+        - img [ref=e99]
+      - generic [ref=e102]:
+        - generic [ref=e103]: WEARABLE STORIES
+        - img [ref=e105]
+      - generic [ref=e108]:
+        - generic [ref=e109]: DA NANG MADE
+        - img [ref=e111]
+      - generic [ref=e114]:
+        - generic [ref=e115]: ONE-OF-ONE
+        - img [ref=e117]
+      - generic [ref=e120]:
+        - generic [ref=e121]: HANDCRAFTED
+        - img [ref=e123]
+      - generic [ref=e126]:
+        - generic [ref=e127]: STAINLESS STEEL
+        - img [ref=e129]
+      - generic [ref=e132]:
+        - generic [ref=e133]: SUSTAINABLE
+        - img [ref=e135]
+      - generic [ref=e138]:
+        - generic [ref=e139]: WEARABLE STORIES
+        - img [ref=e141]
+      - generic [ref=e144]:
+        - generic [ref=e145]: DA NANG MADE
+        - img [ref=e147]
+      - generic [ref=e150]:
+        - generic [ref=e151]: ONE-OF-ONE
+        - img [ref=e153]
+      - generic [ref=e156]:
+        - generic [ref=e157]: HANDCRAFTED
+        - img [ref=e159]
+      - generic [ref=e162]:
+        - generic [ref=e163]: STAINLESS STEEL
+        - img [ref=e165]
+      - generic [ref=e168]:
+        - generic [ref=e169]: SUSTAINABLE
+        - img [ref=e171]
+      - generic [ref=e174]:
+        - generic [ref=e175]: WEARABLE STORIES
+        - img [ref=e177]
+      - generic [ref=e180]:
+        - generic [ref=e181]: DA NANG MADE
+        - img [ref=e183]
+    - generic [ref=e186]:
+      - generic [ref=e188]: Scroll down
+      - heading "Forged from forgotten silver, each piece carries a unique narrative. We handcraft vintage spoons into timeless wearable art, ensuring that no two stories are ever exactly the same." [level=2] [ref=e190]:
+        - paragraph [ref=e191]:
+          - generic [ref=e192]: Forged
+          - generic [ref=e193]: from
+          - generic [ref=e194]: forgotten
+          - generic [ref=e195]: silver,
+          - generic [ref=e196]: each
+          - generic [ref=e197]: piece
+          - generic [ref=e198]: carries
+          - generic [ref=e199]: a
+          - generic [ref=e200]: unique
+          - generic [ref=e201]: narrative.
+          - generic [ref=e202]: We
+          - generic [ref=e203]: handcraft
+          - generic [ref=e204]: vintage
+          - generic [ref=e205]: spoons
+          - generic [ref=e206]: into
+          - generic [ref=e207]: timeless
+          - generic [ref=e208]: wearable
+          - generic [ref=e209]: art,
+          - generic [ref=e210]: ensuring
+          - generic [ref=e211]: that
+          - generic [ref=e212]: "no"
+          - generic [ref=e213]: two
+          - generic [ref=e214]: stories
+          - generic [ref=e215]: are
+          - generic [ref=e216]: ever
+          - generic [ref=e217]: exactly
+          - generic [ref=e218]: the
+          - generic [ref=e219]: same.
+    - generic [ref=e220]:
+      - generic [ref=e221]:
+        - heading "Selected Works" [level=2] [ref=e222]
+        - paragraph [ref=e223]: • Projects
+      - generic [ref=e224]:
+        - article [ref=e225]:
+          - img "Handmade Spoon Rings" [ref=e226]
+          - generic [ref=e228]:
+            - heading "Handmade Spoon Rings" [level=3] [ref=e229]
+            - paragraph [ref=e230]: Signature
+        - article [ref=e231]:
+          - img "Unique Patterns" [ref=e232]
+          - generic [ref=e234]:
+            - heading "Unique Patterns" [level=3] [ref=e235]
+            - paragraph [ref=e236]: Custom
+        - article [ref=e237]:
+          - img "Choosing the Story" [ref=e238]
+          - generic [ref=e240]:
+            - heading "Choosing the Story" [level=3] [ref=e241]
+            - paragraph [ref=e242]: Experience
+        - article [ref=e243]:
+          - img "Customer Moments" [ref=e244]
+          - generic [ref=e246]:
+            - heading "Customer Moments" [level=3] [ref=e247]
+            - paragraph [ref=e248]: Community
+    - generic [ref=e251]:
+      - generic [ref=e252]:
+        - heading "The Founder" [level=2] [ref=e255]
+        - heading "Crafted with Intention." [level=3] [ref=e256]:
+          - text: Crafted with
+          - generic [ref=e257]: Intention.
+        - generic [ref=e260]:
+          - paragraph [ref=e261]: Each item is personally crafted by Quyen, ensuring authenticity, quality, and individuality.
+          - paragraph [ref=e262]: Rather than melting materials into new forms, 2Q Nhẫn Thuật preserves existing patterns and transforms them into jewelry. Repurposing vintage spoons reduces waste and gives forgotten objects a new life.
+          - paragraph [ref=e263]: No two people are the same. No two rings should be either. The imperfections of handmade craftsmanship are embraced as part of the product's identity.
+      - img "Founder Quyen Setting Up" [ref=e266]
+    - generic [ref=e267]:
+      - paragraph [ref=e268]: What We Create
+      - heading "Handcrafted with intention." [level=2] [ref=e269]:
+        - text: Handcrafted with
+        - emphasis [ref=e270]: intention
+        - text: .
+      - generic [ref=e271]:
+        - generic [ref=e272]:
+          - generic [ref=e273]: "01"
+          - heading "Handmade Spoon Rings" [level=3] [ref=e274]
+          - paragraph [ref=e275]: Signature rings crafted from vintage spoons. Each spoon carries its own shape, pattern, and history, making every ring unique.
+        - generic [ref=e276]:
+          - generic [ref=e277]: "02"
+          - heading "Spoon Bracelets" [level=3] [ref=e278]
+          - paragraph [ref=e279]: Hand-shaped bracelets created from stainless steel spoons. Comfortable, durable, and suitable for daily wear.
+        - generic [ref=e280]:
+          - generic [ref=e281]: "03"
+          - heading "Custom Jewelry" [level=3] [ref=e282]
+          - paragraph [ref=e283]: Personalized rings and bracelets made according to customer preferences. Custom sizing, pattern selection, and custom engraving.
+        - generic [ref=e284]:
+          - generic [ref=e285]: "04"
+          - heading "Stainless Steel" [level=3] [ref=e286]
+          - paragraph [ref=e287]: Rust resistant, durable, long-lasting, water-resistant, and comfortable on the skin for everyday wear.
+    - generic [ref=e288]:
+      - generic [ref=e289]:
+        - generic [ref=e290]:
+          - paragraph [ref=e291]: Main Workshop / Experience Space
+          - heading "Musky Bar" [level=2] [ref=e292]:
+            - text: Musky
+            - emphasis [ref=e293]: Bar
+        - generic [ref=e294]:
+          - paragraph [ref=e295]: 27 Nguyễn Cao Luyện, An Hải, Đà Nẵng 550000
+          - paragraph [ref=e296]: View available designs, try on rings, discuss custom orders, meet the maker, and experience the crafting process.
+      - generic [ref=e299]:
+        - img "Workshop View 1" [ref=e301] [cursor=pointer]
+        - img "Workshop View 2" [ref=e303] [cursor=pointer]
+        - img "Workshop View 3" [ref=e305] [cursor=pointer]
+        - img "Workshop View 4" [ref=e307] [cursor=pointer]
+        - img "Workshop View 5" [ref=e309] [cursor=pointer]
+      - generic [ref=e310]:
+        - generic [ref=e311]:
+          - paragraph [ref=e312]: Collaboration Location
+          - heading "INNOIR" [level=2] [ref=e313]:
+            - emphasis [ref=e314]: INNOIR
+        - generic [ref=e315]:
+          - paragraph [ref=e316]: D13 An Thượng 34, Đà Nẵng
+          - paragraph [ref=e317]: Combining handmade jewelry, streetwear culture, and creative expression.
+    - generic [ref=e319]:
+      - generic [ref=e320]:
+        - generic [ref=e321]:
+          - generic [ref=e322]: Connect
+          - heading "Find the studio, or drop a line." [level=2] [ref=e323]:
+            - text: Find the studio,
+            - emphasis [ref=e324]: or drop a line.
+          - paragraph [ref=e325]: Drop by Musky Slow Bar to view available designs, try on rings, and experience the handmade process firsthand. Or, get in touch online.
+        - generic [ref=e326]:
+          - link "0896 208 698" [ref=e328] [cursor=pointer]:
+            - /url: tel:0896208698
+            - img [ref=e329]
+            - text: 0896 208 698
+          - generic [ref=e332]:
+            - link "Facebook →" [ref=e333] [cursor=pointer]:
+              - /url: https://www.facebook.com/profile.php?id=61577127505025
+              - img [ref=e334]
+              - text: Facebook
+              - generic [ref=e336]: →
+            - link "Instagram →" [ref=e337] [cursor=pointer]:
+              - /url: https://www.instagram.com/2qnhanthuat
+              - img [ref=e338]
+              - text: Instagram
+              - generic [ref=e341]: →
+          - generic [ref=e343]:
+            - generic [ref=e344]:
+              - img [ref=e345]
+              - generic [ref=e348]:
+                - strong [ref=e349]: Musky Slow Bar & Bakery
+                - text: 27 Nguyễn Cao Luyện, An Hải Bắc, Sơn Trà, Đà Nẵng
+            - generic [ref=e350]:
+              - img [ref=e351]
+              - generic [ref=e354]:
+                - strong [ref=e355]: Innoir
+                - text: D13, An Thượng 34, Ngũ Hành Sơn, Đà Nẵng
+      - iframe [ref=e357]:
+        
+    - generic [ref=e358]:
+      - generic [ref=e359]:
+        - paragraph [ref=e360]: Customer Feedback
+        - heading "Stories from our community." [level=2] [ref=e361]:
+          - text: Stories from our
+          - emphasis [ref=e362]: community
+          - text: .
+      - generic [ref=e363]:
+        - img [ref=e365]
+        - img [ref=e367]
+        - img [ref=e369]
+        - img [ref=e371]
+        - img [ref=e373]
+        - img [ref=e375]
+        - img [ref=e377]
+        - img [ref=e379]
+        - img [ref=e381]
+        - img [ref=e383]
+        - img [ref=e385]
+        - img [ref=e387]
+        - img [ref=e389]
+        - img [ref=e391]
+        - img [ref=e393]
+        - img [ref=e395]
+        - img [ref=e397]
+        - img [ref=e399]
+        - img [ref=e401]
+        - img [ref=e403]
+        - img [ref=e405]
+        - img [ref=e407]
+        - img [ref=e409]
+        - img [ref=e411]
+        - img [ref=e413]
+        - img [ref=e415]
+        - img [ref=e417]
+        - img [ref=e419]
+        - img [ref=e421]
+        - img [ref=e423]
+        - img [ref=e425]
+        - img [ref=e427]
+        - img [ref=e429]
+        - img [ref=e431]
+        - img [ref=e433]
+        - img [ref=e435]
+        - img [ref=e437]
+        - img [ref=e439]
+        - img [ref=e441]
+        - img [ref=e443]
+        - img [ref=e445]
+        - img [ref=e447]
+        - img [ref=e449]
+        - img [ref=e451]
+        - img [ref=e453]
+        - img [ref=e455]
+    - generic [ref=e456]:
+      - paragraph [ref=e457]: Available for custom orders
+      - link "Let's make something worth remembering." [ref=e458] [cursor=pointer]:
+        - /url: https://www.facebook.com/profile.php?id=61577127505025
+        - text: Let's make something
+        - emphasis [ref=e459]: worth remembering.
+      - paragraph [ref=e460]: DA NANG — WORLDWIDE SHIPPING
+    - generic [ref=e461]:
+      - generic [ref=e462]:
+        - link "Let's make something worth remembering." [ref=e464] [cursor=pointer]:
+          - /url: "#contact"
+          - text: Let's make something
+          - emphasis [ref=e465]: worth remembering.
+        - paragraph [ref=e466]: DA NANG — WORLDWIDE SHIPPING
+      - generic [ref=e468]:
+        - generic [ref=e469]:
+          - paragraph [ref=e470]: 2Q Nhẫn Thuật
+          - paragraph [ref=e471]: © 2026
+        - generic [ref=e472]:
+          - link "About" [ref=e473] [cursor=pointer]:
+            - /url: "#about"
+          - link "Works" [ref=e474] [cursor=pointer]:
+            - /url: "#works"
+          - link "Contact" [ref=e475] [cursor=pointer]:
+            - /url: tel:0896208698
+        - generic [ref=e476]:
+          - link "Facebook" [ref=e477] [cursor=pointer]:
+            - /url: https://www.facebook.com/profile.php?id=61577127505025
+            - img [ref=e478]
+          - link "Instagram" [ref=e480] [cursor=pointer]:
+            - /url: https://www.instagram.com/2qnhanthuat
+            - img [ref=e481]
+  - button "Open Next.js Dev Tools" [ref=e489] [cursor=pointer]:
+    - img [ref=e490]

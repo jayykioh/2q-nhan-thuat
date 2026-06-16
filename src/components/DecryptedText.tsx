@@ -3,6 +3,35 @@
 import { useEffect, useState, useRef, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
+const getAvailableChars = (
+  text: string,
+  characters: string,
+  useOriginalCharsOnly: boolean
+) =>
+  useOriginalCharsOnly
+    ? Array.from(new Set(text.split(''))).filter((char) => char !== ' ')
+    : characters.split('');
+
+const encryptText = (
+  text: string,
+  characters: string,
+  useOriginalCharsOnly: boolean
+) => {
+  const availableChars = getAvailableChars(text, characters, useOriginalCharsOnly);
+
+  return text
+    .split('')
+    .map((char, index) => {
+      if (char === ' ' || availableChars.length === 0) return char;
+      const charCode = char.charCodeAt(0);
+      const deterministicIndex =
+        (charCode * 31 + index * 17 + text.length * 13) % availableChars.length;
+
+      return availableChars[deterministicIndex];
+    })
+    .join('');
+};
+
 const styles: Record<string, React.CSSProperties> = {
   wrapper: {
     display: 'inline-block',
@@ -53,11 +82,14 @@ export default function DecryptedText({
   delay = 0,
   ...props
 }: DecryptedTextProps) {
-  const [displayText, setDisplayText] = useState(text);
+  const startsEncrypted = animateOn === 'click' || animateOn === 'view';
+  const [displayText, setDisplayText] = useState(() =>
+    startsEncrypted ? encryptText(text, characters, useOriginalCharsOnly) : text
+  );
   const [isAnimating, setIsAnimating] = useState(false);
   const [revealedIndices, setRevealedIndices] = useState(new Set<number>());
   const [hasAnimated, setHasAnimated] = useState(false);
-  const [isDecrypted, setIsDecrypted] = useState(animateOn !== 'click');
+  const [isDecrypted, setIsDecrypted] = useState(!startsEncrypted);
   const [direction, setDirection] = useState('forward');
 
   const containerRef = useRef<HTMLSpanElement>(null);
@@ -66,9 +98,7 @@ export default function DecryptedText({
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const availableChars = useMemo(() => {
-    return useOriginalCharsOnly
-      ? Array.from(new Set(text.split(''))).filter((char) => char !== ' ')
-      : characters.split('');
+    return getAvailableChars(text, characters, useOriginalCharsOnly);
   }, [useOriginalCharsOnly, text, characters]);
 
   const shuffleText = useCallback(
@@ -78,6 +108,7 @@ export default function DecryptedText({
         .map((char, i) => {
           if (char === ' ') return ' ';
           if (currentRevealed.has(i)) return originalText[i];
+          if (availableChars.length === 0) return char;
           return availableChars[Math.floor(Math.random() * availableChars.length)];
         })
         .join('');
@@ -128,13 +159,6 @@ export default function DecryptedText({
     }
     return new Set(arr);
   }, []);
-
-  const encryptInstantly = useCallback(() => {
-    const emptySet = new Set<number>();
-    setRevealedIndices(emptySet);
-    setDisplayText(shuffleText(text, emptySet));
-    setIsDecrypted(false);
-  }, [text, shuffleText]);
 
   const triggerDecrypt = useCallback(() => {
     if (sequential) {
@@ -287,16 +311,6 @@ export default function DecryptedText({
     if (currentRef) observer.observe(currentRef);
     return () => { if (currentRef) observer.unobserve(currentRef); };
   }, [animateOn, hasAnimated, triggerDecrypt]);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (animateOn === 'click' || animateOn === 'view') {
-      encryptInstantly();
-    } else {
-      setDisplayText(text); setIsDecrypted(true);
-    }
-    setRevealedIndices(new Set()); setDirection('forward');
-  }, [animateOn, text, encryptInstantly]);
 
   const animateProps =
     animateOn === 'hover' || animateOn === 'inViewHover'

@@ -167,7 +167,7 @@ export default function Hero() {
               Wearable Stories
             </motion.p>
 
-            <h1 className="max-w-[11ch] overflow-hidden font-display font-light tracking-tighter leading-[0.92] text-[var(--text-primary)] sm:leading-[0.88] md:max-w-none md:text-[var(--hero-size)]" style={{ fontSize: "var(--hero-size)" }}>
+            <h1 className="max-w-[11ch] overflow-hidden font-display font-light tracking-tight leading-[1.1] text-[var(--text-primary)] sm:leading-[1.1] md:max-w-none md:text-[var(--hero-size)]" style={{ fontSize: "var(--hero-size)" }}>
               <motion.div variants={containerVariants} initial="hidden" animate="visible">
                 <div className="overflow-hidden">
                   <motion.div variants={lineVariants} className="inline-block">

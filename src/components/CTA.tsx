@@ -10,7 +10,7 @@ export default function CTA() {
         href="https://www.facebook.com/profile.php?id=61577127505025"
         target="_blank"
         rel="noopener noreferrer"
-        className="block font-display text-[var(--h2-size)] font-light text-[var(--text-primary)] leading-[1.1] my-8 transition-colors duration-[var(--dur-fast)] ease-[var(--ease-cinematic)] hover:text-[var(--accent)]"
+        className="block font-display text-[var(--h2-size)] font-light tracking-tight text-[var(--text-primary)] leading-[1.1] my-8 transition-colors duration-[var(--dur-fast)] ease-[var(--ease-cinematic)] hover:text-[var(--accent)]"
       >
         Let&apos;s make something<br />
         <em className="italic">worth remembering.</em>

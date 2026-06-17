@@ -31,43 +31,106 @@ const NecklaceIcon = () => (
   </svg>
 );
 
-const items = [
-  { text: "ONE-OF-ONE", Icon: SpoonIcon },
-  { text: "HANDCRAFTED", Icon: RingIcon },
-  { text: "STAINLESS STEEL", Icon: BraceletIcon },
-  { text: "SUSTAINABLE", Icon: NecklaceIcon },
-  { text: "WEARABLE STORIES", Icon: SpoonIcon },
-  { text: "DA NANG MADE", Icon: RingIcon },
+const EarringsIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" className="opacity-90">
+    <path d="M7 5a3 3 0 0 0 0 6h0a3 3 0 0 0 0-6z" />
+    <path d="M17 5a3 3 0 0 0 0 6h0a3 3 0 0 0 0-6z" />
+    <path d="M7 11v4" />
+    <path d="M17 11v4" />
+    <circle cx="7" cy="16" r="1" />
+    <circle cx="17" cy="16" r="1" />
+  </svg>
+);
+
+const trackAItems = [
+  { type: "word", text: "ONE-OF-ONE" },
+  { type: "icon", Icon: SpoonIcon },
+  { type: "word", text: "HANDCRAFTED" },
+  { type: "icon", Icon: RingIcon },
+  { type: "word", text: "STAINLESS STEEL" },
+  { type: "icon", Icon: BraceletIcon },
+  { type: "word", text: "SUSTAINABLE" },
+  { type: "icon", Icon: EarringsIcon },
+  { type: "word", text: "WEARABLE STORIES" },
+  { type: "icon", Icon: NecklaceIcon },
+  { type: "word", text: "DA NANG MADE" },
+  { type: "icon", Icon: SpoonIcon },
+];
+
+const trackBItems = [
+  { type: "word", text: "HANDCRAFTED" },
+  { type: "icon", Icon: NecklaceIcon },
+  { type: "word", text: "WEARABLE STORIES" },
+  { type: "icon", Icon: RingIcon },
+  { type: "word", text: "SUSTAINABLE" },
+  { type: "icon", Icon: EarringsIcon },
+  { type: "word", text: "ONE-OF-ONE" },
+  { type: "icon", Icon: BraceletIcon },
+  { type: "word", text: "DA NANG MADE" },
+  { type: "icon", Icon: SpoonIcon },
+  { type: "word", text: "STAINLESS STEEL" },
+  { type: "icon", Icon: RingIcon },
 ];
 
 export default function Marquee() {
   const containerRef = useRef<HTMLElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
+  const trackARef = useRef<HTMLDivElement>(null);
+  const trackBRef = useRef<HTMLDivElement>(null);
+  
+  const tweenARef = useRef<gsap.core.Tween | null>(null);
+  const tweenBRef = useRef<gsap.core.Tween | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Seamless GSAP horizontal marquee
-      gsap.to(trackRef.current, {
+      // Seamless GSAP horizontal marquee moving left (Track A)
+      tweenARef.current = gsap.to(trackARef.current, {
         xPercent: -50,
         ease: "none",
-        duration: 25,
+        duration: 80,
         repeat: -1,
       });
+
+      // Seamless GSAP horizontal marquee moving right (Track B)
+      // By starting at -50 and moving to 0, it perfectly loops to the right
+      tweenBRef.current = gsap.fromTo(trackBRef.current, 
+        { xPercent: -50 },
+        {
+          xPercent: 0,
+          ease: "none",
+          duration: 110,
+          repeat: -1,
+        }
+      );
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
 
-  const renderItems = () => (
+  const handleMouseEnter = () => {
+    if (tweenARef.current && tweenBRef.current) {
+      gsap.to([tweenARef.current, tweenBRef.current], { timeScale: 0, duration: 1.5, ease: "power2.out" });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (tweenARef.current && tweenBRef.current) {
+      gsap.to([tweenARef.current, tweenBRef.current], { timeScale: 1, duration: 1.5, ease: "power2.out" });
+    }
+  };
+
+  const renderItems = (items: typeof trackAItems) => (
     <>
       {items.map((item, i) => (
         <div key={i} className="flex items-center gap-8 shrink-0">
-          <span className="font-display text-2xl md:text-3xl font-light text-[var(--text-primary)] tracking-[0.1em] uppercase whitespace-nowrap">
-            {item.text}
-          </span>
-          <div className="text-[var(--accent)] flex items-center justify-center">
-            <item.Icon />
-          </div>
+          {item.type === "word" ? (
+            <span className="font-display text-2xl md:text-3xl font-light text-[var(--text-primary)] tracking-[0.1em] uppercase whitespace-nowrap">
+              {item.text}
+            </span>
+          ) : item.Icon ? (
+            <div className="text-[var(--accent)] flex items-center justify-center">
+              <item.Icon />
+            </div>
+          ) : null}
         </div>
       ))}
     </>
@@ -76,17 +139,36 @@ export default function Marquee() {
   return (
     <section 
       ref={containerRef}
-      className="py-5 border-y border-[rgba(240,237,232,0.1)] bg-[var(--bg-elevated)] overflow-hidden flex items-center"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="py-6 border-y border-[rgba(240,237,232,0.1)] bg-[var(--bg-elevated)] overflow-hidden flex flex-col gap-5 w-full cursor-default"
+      style={{
+        maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+      }}
     >
-      <div 
-        ref={trackRef} 
-        className="flex items-center gap-8 w-max will-change-transform"
-      >
-        {renderItems()}
-        {renderItems()}
-        {/* Render a 3rd and 4th time just in case of ultra-wide screens to ensure -50% has enough coverage */}
-        {renderItems()}
-        {renderItems()}
+      <div className="overflow-hidden flex items-center w-full">
+        <div 
+          ref={trackARef} 
+          className="flex items-center gap-8 w-max will-change-transform"
+        >
+          {renderItems(trackAItems)}
+          {renderItems(trackAItems)}
+          {renderItems(trackAItems)}
+          {renderItems(trackAItems)}
+        </div>
+      </div>
+      
+      <div className="overflow-hidden flex items-center w-full">
+        <div 
+          ref={trackBRef} 
+          className="flex items-center gap-8 w-max will-change-transform"
+        >
+          {renderItems(trackBItems)}
+          {renderItems(trackBItems)}
+          {renderItems(trackBItems)}
+          {renderItems(trackBItems)}
+        </div>
       </div>
     </section>
   );

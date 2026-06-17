@@ -29,6 +29,19 @@ export default function QuoteSection() {
         >
           {quoteText}
         </ScrollReveal>
+        <div className="mt-8 md:mt-12 opacity-60">
+          <ScrollReveal
+            baseOpacity={0}
+            enableBlur={true}
+            baseRotation={3}
+            blurStrength={8}
+            textClassName="font-body text-[var(--label-size)] uppercase tracking-[0.2em] text-[var(--text-primary)]"
+            rotationEnd="center center"
+            wordAnimationEnd="center center"
+          >
+            Mr Quyen . 2Q Nhan Thuat
+          </ScrollReveal>
+        </div>
       </div>
     </section>
   );

@@ -61,7 +61,7 @@ export default function Contact() {
             <span className="reveal-item font-body text-[var(--label-size)] tracking-[0.2em] uppercase text-[var(--accent)] mb-2 block">
               Connect
             </span>
-            <h2 className="reveal-item font-display text-3xl lg:text-4xl font-light text-[var(--text-primary)] leading-[1.1] mb-4">
+            <h2 className="reveal-item font-display text-3xl lg:text-4xl font-light tracking-tight text-[var(--text-primary)] leading-[1.1] mb-4">
               Find the studio, <br />
               <em className="italic">or drop a line.</em>
             </h2>
@@ -85,7 +85,7 @@ export default function Contact() {
 
             {/* Social channels */}
             <div className="reveal-item border-b border-[var(--border)] pb-4">
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+              <div className="flex flex-row items-center gap-6 sm:gap-8">
                 <a
                   href="https://www.facebook.com/profile.php?id=61577127505025"
                   target="_blank"

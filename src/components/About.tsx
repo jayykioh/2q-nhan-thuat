@@ -260,9 +260,9 @@ export default function About() {
               </p>
 
               <p className="about-para font-body text-base md:text-[17px] text-[var(--text-muted)] leading-relaxed opacity-0">
-                Rather than melting materials into new forms, 2Q Nhẫn Thuật
-                preserves the existing patterns of vintage spoons — transforming
-                forgotten objects into things people reach for every morning.
+                At 2Q Nhẫn Thuật, every ring made from a spoon preserves the original 
+                patterns of vintage silverware — transforming forgotten objects into 
+                unique accessories people reach for every morning.
               </p>
 
               <p className="about-para font-body text-base md:text-[17px] text-[var(--text-muted)] leading-relaxed opacity-0">
@@ -353,7 +353,7 @@ export default function About() {
               <div ref={imageInnerRef} className="absolute inset-0 will-change-transform">
                 <Image
                   src="/images/settingup.jpg"
-                  alt="Founder Quyen setting up the workshop"
+                  alt="Founder Quyen setting up the 2Q Nhẫn Thuật workshop to handcraft accessories from spoons"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-center grayscale-[15%]"

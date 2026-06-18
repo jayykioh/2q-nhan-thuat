@@ -18,8 +18,8 @@ export default function AppointmentPage() {
     e.preventDefault();
     const text = `Hi 2Q Nhẫn Thuật,\nI would like to book an appointment.\n\nName: ${formData.name || "A customer"}\nDate: ${formData.date}\nTime: ${formData.time}\nItem: ${formData.type}\nMessage: ${formData.message}`;
     const encoded = encodeURIComponent(text);
-    // SMS intent
-    window.location.href = `sms:0896208698?body=${encoded}`;
+    // WhatsApp intent
+    window.open(`https://wa.me/84896208698?text=${encoded}`, "_blank");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -181,9 +181,9 @@ export default function AppointmentPage() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="group relative mt-6 w-full inline-flex justify-center items-center gap-3 px-6 py-4 bg-[var(--text-primary)] text-[var(--bg)] font-body text-[11px] uppercase tracking-[0.2em] hover:bg-[var(--accent)] transition-all duration-300 rounded-md shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  className="group relative mt-6 w-full inline-flex justify-center items-center gap-3 px-6 py-4 bg-[var(--text-primary)] text-[var(--bg)] font-body text-[11px] uppercase tracking-[0.2em] hover:bg-[#25D366] hover:text-white transition-all duration-300 rounded-md shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
-                  Send Request via SMS
+                  Send via WhatsApp
                   <span className="transform group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
                 </button>
                 

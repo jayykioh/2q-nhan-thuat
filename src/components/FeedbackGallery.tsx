@@ -12,7 +12,7 @@ export default function FeedbackGallery() {
         <div key={i} className="relative h-[min(70vh,400px)] w-[min(78vw,300px)] flex-shrink-0 mx-2 overflow-hidden rounded-[2px]">
           <Image
             src={src}
-            alt={`Customer Feedback ${i + 1}`}
+            alt={`2qnhanthuat customer feedback wearing ring from spoon ${i + 1}`}
             fill
             sizes="(max-width: 480px) 78vw, 300px"
             className="object-cover"
@@ -29,7 +29,7 @@ export default function FeedbackGallery() {
           Customer Feedback
         </p>
         <h2 className="font-display text-[var(--h3-size)] font-light text-[var(--text-primary)]">
-          Stories from our <em className="text-[var(--accent)] italic">community</em>.
+          Stories from our <em className="text-[var(--accent)] italic">2qnhanthuat community</em> wearing custom rings from spoons.
         </h2>
       </div>
       

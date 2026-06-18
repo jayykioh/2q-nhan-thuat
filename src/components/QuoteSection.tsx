@@ -1,7 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 
 const quoteText =
-  "Forged from forgotten silver, each piece carries a unique narrative. We handcraft vintage spoons into timeless wearable art, ensuring that no two stories are ever exactly the same.";
+  "Forged from forgotten silver, each piece carries a unique narrative. We handcraft vintage spoons into timeless wearable art, including our signature rings from spoons and unique accessories.";
 
 export default function QuoteSection() {
   return (
@@ -39,7 +39,7 @@ export default function QuoteSection() {
             rotationEnd="center center"
             wordAnimationEnd="center center"
           >
-            Mr Quyen . 2Q Nhan Thuat
+            Mr Quyen . 2qnhanthuat
           </ScrollReveal>
         </div>
         

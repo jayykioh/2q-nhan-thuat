@@ -85,7 +85,7 @@ export default function Hero() {
       <div className="absolute inset-0 h-full w-full">
         <Image
           src="/images/banner.jpg"
-          alt="Handcrafted spoon jewelry laid out by 2Q Nhẫn Thuật"
+          alt="Handcrafted rings made from spoons by 2Q Nhẫn Thuật"
           fill
           priority
           fetchPriority="high"
@@ -158,6 +158,7 @@ export default function Hero() {
 
         <div className="grid grid-cols-1 items-end gap-7 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-8">
+            <h1 className="sr-only">2Q Nhẫn Thuật - Handcrafted Rings Made From Spoons & Accessories</h1>
             <motion.p
               className="mb-4 font-body text-[var(--label-size)] uppercase tracking-[0.18em] text-[var(--accent)] sm:mb-6"
               initial={{ opacity: 0, x: -16 }}
@@ -167,7 +168,7 @@ export default function Hero() {
               Wearable Stories
             </motion.p>
 
-            <h1 className="max-w-[11ch] overflow-hidden font-display font-light tracking-tight leading-[1.1] text-[var(--text-primary)] sm:leading-[1.1] md:max-w-none md:text-[var(--hero-size)]" style={{ fontSize: "var(--hero-size)" }}>
+            <h2 aria-hidden="true" className="max-w-[11ch] overflow-hidden font-display font-light tracking-tight leading-[1.1] text-[var(--text-primary)] sm:leading-[1.1] md:max-w-none md:text-[var(--hero-size)]" style={{ fontSize: "var(--hero-size)" }}>
               <motion.div variants={containerVariants} initial="hidden" animate="visible">
                 <div className="overflow-hidden">
                   <motion.div variants={lineVariants} className="inline-block">
@@ -225,7 +226,7 @@ export default function Hero() {
                   </motion.div>
                 </div>
               </motion.div>
-            </h1>
+            </h2>
           </div>
 
           <motion.div

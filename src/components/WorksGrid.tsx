@@ -12,24 +12,28 @@ const projects = [
     src: "/images/images.jpg",
     category: "Signature",
     title: "Handmade Spoon Rings",
+    alt: "Handmade ring made from spoon by 2Q Nhẫn Thuật",
     large: true,
   },
   {
     src: "/images/images2.jpg",
     category: "Custom",
     title: "Unique Patterns",
+    alt: "Unique accessories from spoon showing detailed patterns",
     large: false,
   },
   {
     src: "/images/customer_choosing_spoon.jpg",
     category: "Experience",
     title: "Choosing the Story",
+    alt: "Customer choosing a vintage spoon to be crafted into a ring by 2Q Nhẫn Thuật",
     large: false,
   },
   {
     src: "/images/moments_of_customer.jpg",
     category: "Community",
     title: "Customer Moments",
+    alt: "Customer wearing a custom ring made from a spoon by 2Q",
     large: true,
   },
 ];
@@ -107,7 +111,7 @@ export default function WorksGrid() {
           >
             <Image
               src={project.src}
-              alt={project.title}
+              alt={project.alt || project.title}
               fill
               sizes="(max-width: 768px) calc(100vw - 2rem), 40vw"
               className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]"

@@ -82,7 +82,10 @@ export default function Footer() {
           {/* Col 1: Brand */}
           <div>
             <p className="font-display text-[14px] font-normal text-[var(--text-primary)]">
-              2Q Nhẫn Thuật
+              2Q Nhẫn Thuật (2qnhanthuat)
+            </p>
+            <p className="font-body text-[10px] tracking-[0.06em] text-[rgba(255,255,255,0.40)] mt-1">
+              Handcrafted rings from spoons
             </p>
             <p className="font-body text-[9px] tracking-[0.06em] text-[rgba(255,255,255,0.20)] mt-2">
               © {currentYear}
@@ -152,7 +155,10 @@ export default function Footer() {
           {/* Brand + Copyright */}
           <div className="text-center">
             <p className="font-display text-[14px] font-normal text-[var(--text-primary)]">
-              2Q Nhẫn Thuật
+              2Q Nhẫn Thuật (2qnhanthuat)
+            </p>
+            <p className="font-body text-[10px] tracking-[0.06em] text-[rgba(255,255,255,0.40)] mt-1">
+              Handcrafted rings from spoons
             </p>
             <p className="font-body text-[9px] tracking-[0.06em] text-[rgba(255,255,255,0.20)] mt-1">
               © {currentYear}

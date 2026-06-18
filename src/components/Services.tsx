@@ -76,16 +76,16 @@ const IconMaterial = () => (
 const services = [
   {
     icon: IconSpoonRing,
-    name: "Handmade Spoon Rings",
+    name: "Handmade Rings From Spoons",
     tag: "Signature",
-    desc: "Each ring is born from a vintage spoon — its existing pattern, curvature, and patina carried forward into something worn daily. No two are identical.",
+    desc: "At 2qnhanthuat, each custom ring from spoon is born from a vintage piece — its existing pattern, curvature, and patina carried forward into something worn daily. No two spoon rings are identical.",
     detail: "Vintage spoon stock · Hand-formed · One of a kind",
   },
   {
     icon: IconBracelet,
-    name: "Spoon Bracelets",
+    name: "Accessories From Spoons",
     tag: "Everyday",
-    desc: "Stainless steel spoons hand-shaped into open bangles. The slight irregularities from forming by hand are left visible — proof of process, not flaw.",
+    desc: "Stainless steel spoons hand-shaped into open bangles and accessories. The slight irregularities from forming by hand are left visible — proof of process, not flaw.",
     detail: "Stainless steel · Hammered finish · Adjustable",
   },
   {

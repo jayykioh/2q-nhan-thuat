@@ -237,15 +237,15 @@ export default function Hero() {
             <p className="max-w-sm font-body text-[var(--body-size)] leading-relaxed text-[var(--text-muted)] md:max-w-xs">
               Every piece is individually handcrafted, making each creation truly one-of-one.
             </p>
-            <a
-              href="https://www.facebook.com/profile.php?id=61577127505025"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex min-h-11 w-fit items-center gap-3 font-body text-[var(--label-size)] uppercase tracking-[0.15em] text-[var(--accent)]"
-            >
-              <span className="h-px w-8 bg-[var(--accent)] transition-all duration-500 group-hover:w-14" />
-              Order Custom
-            </a>
+            <div className="flex flex-col gap-4 mt-2">
+              <a
+                href="/appointment"
+                className="group inline-flex min-h-8 w-fit items-center gap-3 font-body text-[var(--label-size)] uppercase tracking-[0.15em] text-[var(--accent)]"
+              >
+                <span className="h-px w-8 bg-[var(--accent)] transition-all duration-500 group-hover:w-14" />
+                Book Appointment
+              </a>
+            </div>
           </motion.div>
         </div>
 

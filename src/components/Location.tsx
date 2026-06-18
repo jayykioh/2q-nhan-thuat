@@ -96,12 +96,12 @@ export default function Location() {
         );
       }
 
-      // ── 4. Video wrapper clip reveal (wipe from top) ──────────────────────
+      // ── 4. Video wrapper curtain reveal (wipe from top) ──────────────────────
       gsap.fromTo(
-        ".video-wrapper",
-        { clipPath: "inset(100% 0% 0% 0%)" },
+        ".video-curtain",
+        { scaleY: 1 },
         {
-          clipPath: "inset(0% 0% 0% 0%)",
+          scaleY: 0,
           duration: 1.3,
           ease: "expo.inOut",
           scrollTrigger: {
@@ -267,17 +267,21 @@ export default function Location() {
             loop
             playsInline
             className="w-full h-full object-cover"
+            style={{ backfaceVisibility: "hidden", transform: "translateZ(0)" }}
           />
         </div>
 
         {/* Subtle vignette overlay */}
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 pointer-events-none z-[1]"
           style={{
             background:
               "radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.35) 100%)",
           }}
         />
+
+        {/* Curtain for reveal animation to prevent video clip-path flickering */}
+        <div className="video-curtain absolute inset-0 bg-[var(--bg-elevated)] z-[2] origin-bottom" />
       </div>
 
       {/* ── Gallery ────────────────────────────────────────────────────────── */}

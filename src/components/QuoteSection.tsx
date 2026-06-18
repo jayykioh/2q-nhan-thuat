@@ -42,6 +42,16 @@ export default function QuoteSection() {
             Mr Quyen . 2Q Nhan Thuat
           </ScrollReveal>
         </div>
+        
+        <div className="mt-16 flex justify-center">
+          <a
+            href="/appointment"
+            className="group inline-flex h-12 w-fit items-center justify-center gap-3 border border-[rgba(240,237,232,0.15)] px-8 font-body text-[10px] uppercase tracking-[0.2em] text-[var(--text-primary)] hover:border-[var(--accent)] hover:text-[var(--bg)] hover:bg-[var(--accent)] transition-all duration-500"
+          >
+            Book Appointment
+            <span className="transform transition-transform duration-500 group-hover:translate-x-2">&rarr;</span>
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -116,25 +116,35 @@ export default function Contact() {
             {/* Workshop Address details */}
             <div className="reveal-item">
               <address className="not-italic font-body text-sm text-[var(--text-muted)] leading-relaxed flex flex-col gap-6">
-                <div className="flex items-start gap-3">
-                  <MapPin size={20} className="text-[var(--accent)] shrink-0 mt-0.5" />
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Musky+Slow+Bar+%26+Bakery,+27+Nguyễn+Cao+Luyện,+An+Hải+Bắc,+Sơn+Trà,+Đà+Nẵng" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-start gap-3 hover:bg-[var(--bg-elevated)] p-2 -ml-2 rounded-lg transition-colors duration-300"
+                >
+                  <MapPin size={20} className="text-[var(--accent)] shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                   <div>
-                    <strong className="text-[var(--text-primary)] font-medium block mb-1">
+                    <strong className="text-[var(--text-primary)] font-medium block mb-1 group-hover:text-[var(--accent)] transition-colors duration-300">
                       Musky Slow Bar & Bakery
                     </strong>
-                    27 Nguyễn Cao Luyện, An Hải Bắc, Sơn Trà, Đà Nẵng
+                    <span className="group-hover:text-[var(--text-primary)] transition-colors duration-300">27 Nguyễn Cao Luyện, An Hải Bắc, Sơn Trà, Đà Nẵng</span>
                   </div>
-                </div>
+                </a>
                 
-                <div className="flex items-start gap-3">
-                  <MapPin size={20} className="text-[var(--accent)] shrink-0 mt-0.5" />
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Innoir,+D13,+An+Thượng+34,+Ngũ+Hành+Sơn,+Đà+Nẵng" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-start gap-3 hover:bg-[var(--bg-elevated)] p-2 -ml-2 rounded-lg transition-colors duration-300"
+                >
+                  <MapPin size={20} className="text-[var(--accent)] shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                   <div>
-                    <strong className="text-[var(--text-primary)] font-medium block mb-1">
+                    <strong className="text-[var(--text-primary)] font-medium block mb-1 group-hover:text-[var(--accent)] transition-colors duration-300">
                       Innoir
                     </strong>
-                    D13, An Thượng 34, Ngũ Hành Sơn, Đà Nẵng
+                    <span className="group-hover:text-[var(--text-primary)] transition-colors duration-300">D13, An Thượng 34, Ngũ Hành Sơn, Đà Nẵng</span>
                   </div>
-                </div>
+                </a>
               </address>
             </div>
           </div>

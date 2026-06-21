@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +15,7 @@ const projects = [
     title: "Handmade Spoon Rings",
     alt: "Handmade ring made from spoon by 2Q Nhẫn Thuật",
     large: true,
+    slug: "handmade-spoon-rings",
   },
   {
     src: "/images/images2.jpg",
@@ -21,6 +23,7 @@ const projects = [
     title: "Unique Patterns",
     alt: "Unique accessories from spoon showing detailed patterns",
     large: false,
+    slug: "unique-patterns",
   },
   {
     src: "/images/customer_choosing_spoon.jpg",
@@ -28,6 +31,7 @@ const projects = [
     title: "Choosing the Story",
     alt: "Customer choosing a vintage spoon to be crafted into a ring by 2Q Nhẫn Thuật",
     large: false,
+    slug: "choosing-the-story",
   },
   {
     src: "/images/moments_of_customer.jpg",
@@ -35,6 +39,7 @@ const projects = [
     title: "Customer Moments",
     alt: "Customer wearing a custom ring made from a spoon by 2Q",
     large: true,
+    slug: "customer-moments",
   },
 ];
 
@@ -105,30 +110,32 @@ export default function WorksGrid() {
       {/* Grid: Narrower on desktop for more side spacing, but keeps gap-4 in the middle */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 px-[var(--gutter)] lg:px-12">
         {projects.map((project, idx) => (
-          <article
-            key={idx}
-            className="project-card reveal-item group relative overflow-hidden rounded-[2px] aspect-[4/5] w-full md:cursor-pointer bg-[var(--bg-elevated)]"
-          >
-            <Image
-              src={project.src}
-              alt={project.alt || project.title}
-              fill
-              sizes="(max-width: 768px) calc(100vw - 2rem), 40vw"
-              className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]"
-            />
-            {/* Elegant dark overlay */}
-            <div className="absolute inset-0 bg-black/20 transition-all duration-[1s] ease-out md:bg-black/0 md:group-hover:bg-black/40" />
-            
-            {/* Text wrapper - Smooth fade up */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col items-start gap-1 opacity-100 translate-y-0 transition-all duration-[0.8s] ease-[cubic-bezier(0.25,1,0.5,1)] md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0">
-              <h3 className="font-display text-xl md:text-2xl font-light text-white drop-shadow-md">
-                {project.title}
-              </h3>
-              <p className="font-body text-[10px] md:text-xs tracking-[0.2em] uppercase text-white/70 drop-shadow-md">
-                {project.category}
-              </p>
-            </div>
-          </article>
+          <Link href={`/works/${project.slug}`} key={idx} className="block w-full">
+            <article
+              className="project-card reveal-item group relative overflow-hidden rounded-[2px] aspect-[4/5] w-full md:cursor-pointer bg-[var(--bg-elevated)]"
+            >
+              <Image
+                src={project.src}
+                alt={project.alt || project.title}
+                fill
+                quality={80}
+                sizes="(max-width: 768px) calc(100vw - 2rem), 40vw"
+                className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]"
+              />
+              {/* Elegant dark overlay */}
+              <div className="absolute inset-0 bg-black/20 transition-all duration-[1s] ease-out md:bg-black/0 md:group-hover:bg-black/40" />
+              
+              {/* Text wrapper - Smooth fade up */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col items-start gap-1 opacity-100 translate-y-0 transition-all duration-[0.8s] ease-[cubic-bezier(0.25,1,0.5,1)] md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0">
+                <h3 className="font-display text-xl md:text-2xl font-light text-white drop-shadow-md">
+                  {project.title}
+                </h3>
+                <p className="font-body text-[10px] md:text-xs tracking-[0.2em] uppercase text-white/70 drop-shadow-md">
+                  {project.category}
+                </p>
+              </div>
+            </article>
+          </Link>
         ))}
       </div>
     </section>

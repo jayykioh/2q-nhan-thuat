@@ -89,6 +89,7 @@ export default function Hero() {
           fill
           priority
           fetchPriority="high"
+          quality={80}
           sizes="100vw"
           className="hero-fullbleed-img object-cover object-center"
           style={{ willChange: "transform, opacity" }}
@@ -158,7 +159,6 @@ export default function Hero() {
 
         <div className="grid grid-cols-1 items-end gap-7 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-8">
-            <h1 className="sr-only">2Q Nhẫn Thuật - Handcrafted Rings Made From Spoons & Accessories</h1>
             <motion.p
               className="mb-4 font-body text-[var(--label-size)] uppercase tracking-[0.18em] text-[var(--accent)] sm:mb-6"
               initial={{ opacity: 0, x: -16 }}
@@ -168,8 +168,9 @@ export default function Hero() {
               Wearable Stories
             </motion.p>
 
-            <h2 aria-hidden="true" className="max-w-[11ch] overflow-hidden font-display font-light tracking-tight leading-[1.1] text-[var(--text-primary)] sm:leading-[1.1] md:max-w-none md:text-[var(--hero-size)]" style={{ fontSize: "var(--hero-size)" }}>
-              <motion.div variants={containerVariants} initial="hidden" animate="visible">
+            <h1 className="max-w-[11ch] overflow-hidden font-display font-light tracking-tight leading-[1.1] text-[var(--text-primary)] sm:leading-[1.1] md:max-w-none md:text-[var(--hero-size)]" style={{ fontSize: "var(--hero-size)" }}>
+              <span className="sr-only">2Q Nhẫn Thuật - Handcrafted Rings Made From Spoons & Accessories. Turn Forgotten Spoons Into Wearable Stories</span>
+              <motion.div aria-hidden="true" variants={containerVariants} initial="hidden" animate="visible">
                 <div className="overflow-hidden">
                   <motion.div variants={lineVariants} className="inline-block">
                     {shouldReduceMotion ? (
@@ -226,7 +227,7 @@ export default function Hero() {
                   </motion.div>
                 </div>
               </motion.div>
-            </h2>
+            </h1>
           </div>
 
           <motion.div

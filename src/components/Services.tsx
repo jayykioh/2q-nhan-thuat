@@ -104,6 +104,16 @@ const services = [
   },
 ];
 
+const ambientParticles = Array.from({ length: 15 }).map((_, i) => ({
+  id: i,
+  left: `${(i * 13.7 + 5) % 100}%`,
+  top: `${(i * 19.3 + 11) % 100}%`,
+  duration: 4 + (i % 5),
+  delay: (i % 4) * 0.7,
+  xOffset: i % 2 === 0 ? 15 : -15,
+  size: i % 3 === 0 ? 3 : i % 2 === 0 ? 2 : 1.5,
+}));
+
 export default function Services() {
   const sectionRef = useRef<HTMLElement>(null);
   const prefersReducedMotion = useReducedMotion();
@@ -150,9 +160,18 @@ export default function Services() {
       });
 
       // ── Icon slow spin on scroll (ambient, barely perceptible) ─────────────
-      gsap.utils.toArray<HTMLElement>(".svc-icon-wrap").forEach((el) => {
+      gsap.utils.toArray<HTMLElement>(".svc-icon-wrap").forEach((el, i) => {
+        // Continuous float for icons (enhances mobile feel)
         gsap.to(el, {
-          rotate: 8,
+          y: -6,
+          duration: 2 + (i % 3) * 0.5,
+          yoyo: true,
+          repeat: -1,
+          ease: "sine.inOut",
+        });
+
+        gsap.to(el, {
+          rotate: 12,
           ease: "none",
           scrollTrigger: {
             trigger: el.closest(".svc-row"),
@@ -173,6 +192,35 @@ export default function Services() {
       className="relative px-[var(--gutter)] py-[var(--section-py)] bg-[var(--bg)] overflow-hidden"
       id="services"
     >
+      {/* ── Background Ambient Particles ────────────────────────────────────── */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {ambientParticles.map((p) => (
+          <motion.div
+            key={p.id}
+            className="absolute rounded-full bg-[var(--accent)]"
+            style={{
+              left: p.left,
+              top: p.top,
+              width: p.size,
+              height: p.size,
+              opacity: 0.15,
+            }}
+            animate={prefersReducedMotion ? {} : {
+              y: [0, -40, 0],
+              x: [0, p.xOffset, 0],
+              opacity: [0.1, 0.35, 0.1],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: p.duration,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: p.delay,
+            }}
+          />
+        ))}
+      </div>
+
       {/* ── Header ──────────────────────────────────────────────────────────── */}
       <div className="svc-header opacity-0 flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20 md:mb-28">
         <div>
@@ -203,11 +251,12 @@ export default function Services() {
               <div
                 className="
                   absolute left-0 top-0 bottom-0 w-[2px] md:w-[1.5px] 
-                  bg-[var(--accent)] origin-top scale-y-0 
-                  transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-                  group-hover:scale-y-100
+                  bg-[var(--accent)] origin-top 
+                  max-md:scale-y-100 max-md:opacity-[0.15]
+                  md:scale-y-0 md:opacity-50
+                  transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
+                  group-hover:scale-y-100 group-hover:opacity-50
                 "
-                style={{ opacity: 0.5 }}
               />
 
               {/* Mobile grouping: Icon + Title */}
@@ -217,18 +266,35 @@ export default function Services() {
                   <div
                     className="
                       svc-icon-wrap relative w-12 h-12 md:w-14 md:h-14 
-                      text-[var(--text-muted)] 
+                      text-[var(--accent)] md:text-[var(--text-muted)] 
                       transition-colors duration-500
                       group-hover:text-[var(--accent)]
                       will-change-transform
                     "
                   >
                     <Icon />
+                    
+                    {/* Floating Sparks (Mobile Enhanced) */}
+                    <div className="absolute inset-0 pointer-events-none md:hidden">
+                       <motion.div 
+                          className="absolute top-[-4px] left-[-4px] w-[3px] h-[3px] bg-[var(--accent)] rounded-full"
+                          animate={prefersReducedMotion ? {} : { y: [0, -12], opacity: [0, 0.8, 0], scale: [0.5, 1.2, 0.5] }}
+                          transition={{ duration: 2.2 + (idx % 2), repeat: Infinity, ease: "easeOut", delay: idx * 0.3 }}
+                       />
+                       <motion.div 
+                          className="absolute bottom-[2px] right-[-2px] w-[2px] h-[2px] bg-[var(--accent)] rounded-full"
+                          animate={prefersReducedMotion ? {} : { y: [0, -10], x: [0, 6], opacity: [0, 0.6, 0] }}
+                          transition={{ duration: 2.5 + (idx % 3), repeat: Infinity, ease: "easeOut", delay: idx * 0.4 + 1 }}
+                       />
+                    </div>
+
                     {/* Faint circle ring that appears on hover */}
                     <div
                       className="
                         absolute inset-[-6px] rounded-full 
-                        border border-[var(--accent)] opacity-0 scale-75
+                        border border-[var(--accent)] 
+                        max-md:opacity-20 max-md:scale-100
+                        md:opacity-0 md:scale-75
                         transition-all duration-500 ease-out
                         group-hover:opacity-20 group-hover:scale-100
                       "
@@ -280,8 +346,10 @@ export default function Services() {
                 className="
                   absolute bottom-0 left-0 h-[1px]
                   bg-gradient-to-r from-[var(--accent)] via-[var(--accent)] to-transparent
-                  w-0 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-                  group-hover:w-full opacity-25
+                  max-md:w-full max-md:opacity-10
+                  md:w-0 md:opacity-25
+                  transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
+                  group-hover:w-full group-hover:opacity-25
                 "
               />
             </div>

@@ -91,14 +91,14 @@ export default function Contact() {
 
             {/* Social channels */}
             <div className="reveal-item border-b border-[var(--border)] pb-4">
-              <div className="flex flex-row items-center gap-6 sm:gap-8">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
                 <a
                   href="https://www.facebook.com/profile.php?id=61577127505025"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex min-h-11 items-center gap-2 font-body text-sm tracking-[0.1em] uppercase text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors duration-300"
                 >
-                  <Facebook size={18} className="text-[var(--accent)]" />
+                  <Facebook size={18} className="text-[var(--accent)] shrink-0" />
                   Facebook
                   <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">
                     &rarr;
@@ -110,7 +110,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="group flex min-h-11 items-center gap-2 font-body text-sm tracking-[0.1em] uppercase text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors duration-300"
                 >
-                  <Instagram size={18} className="text-[var(--accent)]" />
+                  <Instagram size={18} className="text-[var(--accent)] shrink-0" />
                   Instagram
                   <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">
                     &rarr;
@@ -122,7 +122,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="group flex min-h-11 items-center gap-2 font-body text-sm tracking-[0.1em] uppercase text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors duration-300"
                 >
-                  <WhatsApp size={18} className="text-[var(--accent)]" />
+                  <WhatsApp size={18} className="text-[var(--accent)] shrink-0" />
                   WhatsApp
                   <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">
                     &rarr;

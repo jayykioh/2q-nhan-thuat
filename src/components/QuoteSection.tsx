@@ -42,7 +42,7 @@ export default function QuoteSection() {
             Mr Quyen . 2qnhanthuat
           </ScrollReveal>
         </div>
-        
+
         <div className="mt-16 flex justify-center">
           <a
             href="/appointment"

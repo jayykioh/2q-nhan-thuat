@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -37,7 +37,15 @@ const fadeUp = {
 
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
-  const shouldReduceMotion = useReducedMotion();
+  const prefersReducedMotion = useReducedMotion();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Use false on server (before mount) to match SSR output and avoid hydration mismatch
+  const shouldReduceMotion = isMounted ? prefersReducedMotion : false;
 
   useEffect(() => {
     const heroImage = containerRef.current?.querySelector(".hero-fullbleed-img");

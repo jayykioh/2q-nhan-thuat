@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     images: ["https://2qnhanthuat.com/images/og-image.jpg"],
   },
   metadataBase: new URL("https://2qnhanthuat.com"),
+  verification: {
+    google: "4HIDEbw3B4nxIT0B4n2tvVpNdW1exN-TvgEQWIUSlI0",
+  },
   alternates: {
     canonical: "/",
   },

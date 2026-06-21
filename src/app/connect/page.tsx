@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { MapPin, Phone, ArrowLeft } from "lucide-react";
+import { MapPin, ArrowLeft } from "lucide-react";
 
 const Facebook = ({ size = 20, strokeWidth = 1.25, className = "" }: { size?: number; strokeWidth?: number; className?: string }) => (
   <svg
@@ -39,11 +39,27 @@ const Instagram = ({ size = 20, strokeWidth = 1.25, className = "" }: { size?: n
   </svg>
 );
 
+const WhatsApp = ({ size = 20, strokeWidth = 1.25, className = "" }: { size?: number; strokeWidth?: number; className?: string }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+  </svg>
+);
+
 const links = [
   {
     name: "Google Maps",
     desc: "27 Nguyễn Cao Luyện, Đà Nẵng",
-    href: "https://maps.google.com/?q=27+Nguyễn+Cao+Luyện,+An+Hải,+Đà+Nẵng",
+    href: "https://maps.app.goo.gl/9y3rNzMZapsXsHDT9",
     icon: MapPin,
     external: true,
   },
@@ -62,10 +78,10 @@ const links = [
     external: true,
   },
   {
-    name: "Phone Number",
-    desc: "0896 208 698",
-    href: "tel:0896208698",
-    icon: Phone,
+    name: "WhatsApp",
+    desc: "Chat with us",
+    href: "https://wa.me/84896208698",
+    icon: WhatsApp,
     external: true,
   },
 ];

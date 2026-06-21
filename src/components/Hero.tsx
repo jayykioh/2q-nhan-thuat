@@ -242,9 +242,8 @@ export default function Hero() {
             <div className="flex flex-col gap-4 mt-2">
               <a
                 href="/appointment"
-                className="group inline-flex min-h-8 w-fit items-center gap-3 font-body text-[var(--label-size)] uppercase tracking-[0.15em] text-[var(--accent)]"
+                className="group inline-flex h-12 w-fit items-center justify-center gap-3 border border-[var(--accent)] px-8 font-body text-[10px] uppercase tracking-[0.2em] text-[var(--accent)] hover:text-[var(--bg)] hover:bg-[var(--accent)] transition-all duration-500 font-medium"
               >
-                <span className="h-px w-8 bg-[var(--accent)] transition-all duration-500 group-hover:w-14" />
                 Book Appointment
               </a>
             </div>

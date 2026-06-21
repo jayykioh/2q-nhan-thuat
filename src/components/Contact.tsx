@@ -19,6 +19,12 @@ const Instagram = ({ size = 24, className = "" }: { size?: number, className?: s
   </svg>
 );
 
+const WhatsApp = ({ size = 24, className = "" }: { size?: number, className?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+  </svg>
+);
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact() {
@@ -67,7 +73,7 @@ export default function Contact() {
             </h2>
             
             <p className="reveal-item font-body text-[var(--body-size)] text-[var(--text-muted)] leading-relaxed mb-8 max-w-md">
-              Drop by Musky Slow Bar to view available designs, try on rings, and experience the handmade process firsthand. Or, get in touch online.
+              Drop by 2Q Nhẫn Thuật to view available designs, try on rings, and experience the handmade process firsthand. Or, get in touch online.
             </p>
           </div>
 
@@ -110,6 +116,18 @@ export default function Contact() {
                     &rarr;
                   </span>
                 </a>
+                <a
+                  href="https://wa.me/84896208698"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex min-h-11 items-center gap-2 font-body text-sm tracking-[0.1em] uppercase text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors duration-300"
+                >
+                  <WhatsApp size={18} className="text-[var(--accent)]" />
+                  WhatsApp
+                  <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">
+                    &rarr;
+                  </span>
+                </a>
               </div>
             </div>
 
@@ -117,7 +135,7 @@ export default function Contact() {
             <div className="reveal-item">
               <address className="not-italic font-body text-sm text-[var(--text-muted)] leading-relaxed flex flex-col gap-6">
                 <a 
-                  href="https://www.google.com/maps/search/?api=1&query=Musky+Slow+Bar+%26+Bakery,+27+Nguyễn+Cao+Luyện,+An+Hải+Bắc,+Sơn+Trà,+Đà+Nẵng" 
+                  href="https://maps.app.goo.gl/9y3rNzMZapsXsHDT9" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group flex items-start gap-3 hover:bg-[var(--bg-elevated)] p-2 -ml-2 rounded-lg transition-colors duration-300"
@@ -125,7 +143,7 @@ export default function Contact() {
                   <MapPin size={20} className="text-[var(--accent)] shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <strong className="text-[var(--text-primary)] font-medium block mb-1 group-hover:text-[var(--accent)] transition-colors duration-300">
-                      Musky Slow Bar & Bakery
+                      2Q Nhẫn Thuật
                     </strong>
                     <span className="group-hover:text-[var(--text-primary)] transition-colors duration-300">27 Nguyễn Cao Luyện, An Hải Bắc, Sơn Trà, Đà Nẵng</span>
                   </div>
@@ -140,7 +158,7 @@ export default function Contact() {
                   <MapPin size={20} className="text-[var(--accent)] shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <strong className="text-[var(--text-primary)] font-medium block mb-1 group-hover:text-[var(--accent)] transition-colors duration-300">
-                      Innoir
+                      Innoir ( Collaboration Location )
                     </strong>
                     <span className="group-hover:text-[var(--text-primary)] transition-colors duration-300">D13, An Thượng 34, Ngũ Hành Sơn, Đà Nẵng</span>
                   </div>
@@ -153,12 +171,12 @@ export default function Contact() {
         {/* Right Column: Google Maps Embed */}
         <div className="reveal-item w-full aspect-[4/3] sm:aspect-video relative rounded-[2px] overflow-hidden border border-[var(--border)] bg-[var(--bg-elevated)]">
           <iframe
-            src="https://maps.google.com/maps?q=Musky%20Slow%20Bar%20%26%20Bakery,%2027%20Nguy%E1%BB%85n%20Cao%20Luy%E1%BB%87n,%20An%20H%E1%BA%A3i%20B%E1%BA%AFc,%20S%C6%A1n%20Tr%C3%A0,%20%C4%90%C3%A0%20N%E1%BA%B5ng&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=27%20Nguy%E1%BB%85n%20Cao%20Luy%E1%BB%87n,%20An%20H%E1%BA%A3i%20B%E1%BA%AFc,%20S%C6%A1n%20Tr%C3%A0,%20%C4%90%C3%A0%20N%E1%BA%B5ng&t=&z=16&ie=UTF8&iwloc=&output=embed"
             className="w-full h-full border-0 opacity-90 hover:opacity-100 transition-opacity duration-300"
             allowFullScreen={false}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Musky Slow Bar & Bakery Location Map"
+            title="2Q Nhẫn Thuật Location Map"
           />
           <div className="absolute inset-0 pointer-events-none border border-inset border-[rgba(240,237,232,0.05)] rounded-[2px]" />
         </div>

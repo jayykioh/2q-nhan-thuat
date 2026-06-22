@@ -16,29 +16,33 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "2Q Nhẫn Thuật | Nhẫn Handmade Từ Muỗng – Đà Nẵng",
-  description: "2Q Nhẫn Thuật – Chuyên làm nhẫn handmade từ muỗng cổ và phụ kiện thủ công tại Đà Nẵng. Mỗi chiếc nhẫn là một câu chuyện riêng, được chế tác tỉ mỉ từ thìa bạc cổ điển. Handcrafted spoon rings & accessories in Da Nang, Vietnam.",
-  keywords: "nhẫn từ muỗng, nhẫn handmade đà nẵng, phụ kiện từ thìa, 2q nhẫn thuật, 2qnhanthuat, nhẫn bạc thủ công, spoon rings da nang, handmade jewelry vietnam, ring from spoon, custom rings",
+  title: "2Q Nhan Thuat | Handmade Spoon Rings in Da Nang",
+  description:
+    "2Q Nhan Thuat creates handcrafted spoon rings and custom silverware jewelry in Da Nang, Vietnam. Each piece is made by hand from vintage spoons and designed as a one-of-a-kind wearable story.",
+  keywords:
+    "handmade spoon rings, spoon rings da nang, custom silver rings, handcrafted jewelry vietnam, vintage silverware jewelry, one of a kind rings, custom rings, handmade jewelry da nang, 2q nhan thuat, 2qnhanthuat",
   openGraph: {
-    title: "2Q Nhẫn Thuật | Nhẫn Handmade Từ Muỗng – Đà Nẵng",
-    description: "2Q Nhẫn Thuật – Chuyên làm nhẫn handmade từ muỗng cổ và phụ kiện thủ công tại Đà Nẵng. Mỗi chiếc nhẫn là một câu chuyện riêng. Handcrafted spoon rings in Da Nang, Vietnam.",
+    title: "2Q Nhan Thuat | Handmade Spoon Rings in Da Nang",
+    description:
+      "Handcrafted spoon rings and custom silverware jewelry made in Da Nang, Vietnam. Explore one-of-a-kind rings shaped from vintage spoons and finished by hand.",
     url: "https://2qnhanthuat.com",
-    siteName: "2Q Nhẫn Thuật",
-    locale: "vi_VN",
+    siteName: "2Q Nhan Thuat",
+    locale: "en_US",
     type: "website",
     images: [
       {
         url: "https://2qnhanthuat.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "2Q Nhẫn Thuật – Nhẫn Handmade Từ Muỗng Cổ tại Đà Nẵng",
+        alt: "2Q Nhan Thuat handcrafted spoon rings in Da Nang",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "2Q Nhẫn Thuật | Nhẫn Handmade Từ Muỗng – Đà Nẵng",
-    description: "Chuyên làm nhẫn handmade từ muỗng cổ và phụ kiện thủ công tại Đà Nẵng.",
+    title: "2Q Nhan Thuat | Handmade Spoon Rings in Da Nang",
+    description:
+      "Handcrafted spoon rings and custom silverware jewelry made in Da Nang, Vietnam.",
     images: ["https://2qnhanthuat.com/images/og-image.jpg"],
   },
   metadataBase: new URL("https://2qnhanthuat.com"),
@@ -50,7 +54,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,49 +62,60 @@ export default function RootLayout({
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "JewelryStore",
-    "name": "2Q Nhẫn Thuật",
-    "alternateName": ["2Q", "2qnhanthuat"],
-    "description": "Chuyên làm nhẫn handmade từ muỗng cổ và phụ kiện thủ công tại Đà Nẵng. Handcrafted spoon rings and vintage silverware accessories in Da Nang, Vietnam.",
-    "url": "https://2qnhanthuat.com",
-    "telephone": "+84896208698",
-    "image": "https://2qnhanthuat.com/images/og-image.jpg",
-    "priceRange": "₫₫",
-    "address": {
+    name: "2Q Nhan Thuat",
+    alternateName: ["2Q", "2qnhanthuat"],
+    description:
+      "Handcrafted spoon rings and vintage silverware accessories made in Da Nang, Vietnam.",
+    url: "https://2qnhanthuat.com",
+    telephone: "+84896208698",
+    image: "https://2qnhanthuat.com/images/og-image.jpg",
+    priceRange: "$$",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "27 Nguyễn Cao Luyện, An Hải Bắc",
-      "addressLocality": "Sơn Trà, Đà Nẵng",
-      "addressCountry": "VN"
+      streetAddress: "27 Nguyen Cao Luyen, An Hai Bac",
+      addressLocality: "Son Tra, Da Nang",
+      addressCountry: "VN",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": 16.0799,
-      "longitude": 108.2322
+      latitude: 16.0799,
+      longitude: 108.2322,
     },
-    "openingHoursSpecification": [
+    openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "09:00",
-        "closes": "21:00"
-      }
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "09:00",
+        closes: "21:00",
+      },
     ],
-    "sameAs": [
+    sameAs: [
       "https://www.facebook.com/profile.php?id=61577127505025",
-      "https://www.instagram.com/2qnhanthuat"
+      "https://www.instagram.com/2qnhanthuat",
     ],
-    "hasMap": "https://maps.google.com/?q=27+Nguyễn+Cao+Luyện,+An+Hải+Bắc,+Sơn+Trà,+Đà+Nẵng",
-    "currenciesAccepted": "VND",
-    "paymentAccepted": "Cash, Bank Transfer",
-    "areaServed": {
+    hasMap:
+      "https://maps.google.com/?q=27+Nguyen+Cao+Luyen,+An+Hai+Bac,+Son+Tra,+Da+Nang",
+    currenciesAccepted: "VND",
+    paymentAccepted: "Cash, Bank Transfer",
+    areaServed: {
       "@type": "City",
-      "name": "Đà Nẵng"
+      name: "Da Nang",
     },
-    "keywords": "nhẫn từ muỗng, nhẫn handmade đà nẵng, ring made from spoon, 2q nhan thuat, 2q, accessories from spoon"
+    keywords:
+      "handmade spoon rings, spoon rings da nang, custom rings, vintage silverware jewelry, 2q nhan thuat, accessories from spoon",
   };
 
   return (
     <html
-      lang="vi"
+      lang="en"
       data-scroll-behavior="smooth"
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >

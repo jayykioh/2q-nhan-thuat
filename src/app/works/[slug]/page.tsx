@@ -101,10 +101,10 @@ export async function generateMetadata({
       description: collection.description,
       images: [
         {
-          url: `https://2qnhanthuat.com${collection.heroImage}`,
-          width: 1200,
-          height: 800,
-          alt: collection.title,
+          url: "https://2qnhanthuat.com/images/logo.jpg",
+          width: 500,
+          height: 500,
+          alt: "2Q Nhan Thuat logo",
         },
       ],
     },

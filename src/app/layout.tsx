@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://2qnhanthuat.com/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "2Q Nhan Thuat handcrafted spoon rings in Da Nang",
+        url: "https://2qnhanthuat.com/images/logo.jpg",
+        width: 500,
+        height: 500,
+        alt: "2Q Nhan Thuat logo",
       },
     ],
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "2Q Nhan Thuat | Handmade Spoon Rings in Da Nang",
     description:
       "Handcrafted spoon rings and custom silverware jewelry made in Da Nang, Vietnam.",
-    images: ["https://2qnhanthuat.com/images/og-image.jpg"],
+    images: ["https://2qnhanthuat.com/images/logo.jpg"],
   },
   metadataBase: new URL("https://2qnhanthuat.com"),
   verification: {
@@ -68,7 +68,7 @@ export default function RootLayout({
       "Handcrafted spoon rings and vintage silverware accessories made in Da Nang, Vietnam.",
     url: "https://2qnhanthuat.com",
     telephone: "+84896208698",
-    image: "https://2qnhanthuat.com/images/og-image.jpg",
+    image: "https://2qnhanthuat.com/images/logo.jpg",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",

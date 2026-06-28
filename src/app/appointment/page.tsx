@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://2qnhanthuat.com/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Book a handcrafted spoon ring appointment at 2Q Nhan Thuat in Da Nang",
+        url: "https://2qnhanthuat.com/images/logo.jpg",
+        width: 500,
+        height: 500,
+        alt: "2Q Nhan Thuat logo",
       },
     ],
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Book an Appointment | 2Q Nhan Thuat",
     description:
       "Book a handcrafted spoon ring appointment in Da Nang or online.",
-    images: ["https://2qnhanthuat.com/images/og-image.jpg"],
+    images: ["https://2qnhanthuat.com/images/logo.jpg"],
   },
   alternates: {
     canonical: "/appointment",
